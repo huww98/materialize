@@ -5243,8 +5243,8 @@ small {
   background-color: #26a69a;
   text-align: center;
   letter-spacing: .5px;
-  -webkit-transition: .2s ease-out;
-  transition: .2s ease-out;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
   cursor: pointer;
 }
 
@@ -5264,8 +5264,8 @@ small {
   padding: 0;
   background-color: #26a69a;
   border-radius: 50%;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   cursor: pointer;
   vertical-align: middle;
 }
@@ -5515,6 +5515,10 @@ button.btn-floating {
   z-index: 999;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
+}
+
+.dropdown-content:focus {
+  outline: 0;
 }
 
 .dropdown-content li {
@@ -6592,14 +6596,17 @@ textarea {
 }
 
 textarea.materialize-textarea {
+  line-height: normal;
   overflow-y: hidden;
   /* prevents scroll bar flash */
-  padding: .8rem 0 1.6rem 0;
+  padding: .8rem 0 .8rem 0;
   /* prevents text jump on Enter keypress */
   resize: none;
   min-height: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .hiddendiv {
@@ -7364,7 +7371,7 @@ input[type=range]::-webkit-slider-thumb {
   margin: -5px 0 0 0;
 }
 
-input[type=range]:focus:not(.active)::-webkit-slider-thumb {
+input[type=range].focused:focus:not(.active)::-webkit-slider-thumb {
   -webkit-box-shadow: 0 0 0 10px rgba(38, 166, 154, 0.26);
           box-shadow: 0 0 0 10px rgba(38, 166, 154, 0.26);
 }
@@ -7403,7 +7410,7 @@ input[type=range]:-moz-focusring {
   outline-offset: -1px;
 }
 
-input[type=range]:focus:not(.active)::-moz-range-thumb {
+input[type=range].focused:focus:not(.active)::-moz-range-thumb {
   box-shadow: 0 0 0 10px rgba(38, 166, 154, 0.26);
 }
 
@@ -7436,7 +7443,7 @@ input[type=range]::-ms-thumb {
   transition: box-shadow .3s, -webkit-box-shadow .3s;
 }
 
-input[type=range]:focus:not(.active)::-ms-thumb {
+input[type=range].focused:focus:not(.active)::-ms-thumb {
   box-shadow: 0 0 0 10px rgba(38, 166, 154, 0.26);
 }
 
@@ -8431,10 +8438,10 @@ input[type=range]:focus:not(.active)::-ms-thumb {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s;
-  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
+  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility 0s 1s;
+  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
 }
 
 .tap-target {
@@ -8487,10 +8494,10 @@ input[type=range]:focus:not(.active)::-ms-thumb {
 
 .tap-target-wave::after {
   visibility: hidden;
-  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
-  transition: opacity .3s, transform .3s, visibility 0s;
-  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
+  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
+  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility 0s;
+  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
   z-index: -1;
 }
 
