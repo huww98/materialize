@@ -6086,8 +6086,10 @@ textarea.materialize-textarea {
           box-shadow: none;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: border .3s, -webkit-box-shadow .3s;
+  transition: border .3s, -webkit-box-shadow .3s;
+  transition: box-shadow .3s, border .3s;
+  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
 }
 
 input:not([type]):disabled, input:not([type])[readonly="readonly"],
@@ -6605,8 +6607,6 @@ textarea.materialize-textarea {
   min-height: 3rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: none;
-  transition: none;
 }
 
 .hiddendiv {
@@ -7139,6 +7139,7 @@ select {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 1;
 }
 
 .select-wrapper input.select-dropdown:focus {
@@ -7151,7 +7152,7 @@ select {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  z-index: -1;
+  z-index: 0;
   fill: rgba(0, 0, 0, 0.87);
 }
 
